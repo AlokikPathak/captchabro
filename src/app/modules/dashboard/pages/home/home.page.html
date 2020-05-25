@@ -1,89 +1,83 @@
 
 <body>
 	<header class="showcase">
-		<div class="content">
+		<!-- <div class="content">
 			<img src="assets/images/logo_white_48dp.svg" class="logo" alt="Campaigner">
 			<div class="title">Captchabro</div>
 			
 			<div class="text">
 				BE the CHANGE you want to SEE.
 			</div>
-		</div>
+		</div> -->
 	</header>
     <div></div>
 
-    <h1 style="text-align:center;  font-size: 1.5rem; margin-top: 25px; margin-bottom: 25px;">Captchabro in brief !</h1>
+    <h1 style="text-align:center; color: #494747; font-size: 2.2rem; padding: 4rem 0 4rem 0; font-weight: bold;">Captchabro in breif</h1>
 
     <div style="overflow-x: hidden;">
         <iframe class="video" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
     </div>
 
-    <h1 style="text-align:center;  font-size: 1.5rem; margin-top: 25px; margin-bottom: 25px;">Why Captchabro?</h1>
+    <div class="why-us">
 
-    <div class="grid-container">
+        <h1 style="text-align:center; color: #494747; font-size: 2.2rem; padding: 4rem 0 4rem 0; font-weight: bold;">Why Captchabro?</h1>
+
+    <div class="grid-container" style="margin-bottom: 3rem;">
         <div class="item">
-            <div class="photo">
-                <img class="grid-img" src="./../../../../../assets/images/home/moc.jpg" />
+            <div class="photo" style="height: 60%;">
+                <img class="grid-img" src="./../../../../../assets/images/home/iso.jpg" />
             </div>
-            <p>Certified by Ministry of Ext. Affairs</p>
+            <mat-divider></mat-divider>
+           <div> <p style="padding: 1em 0.1em 0 0.1em;  font-size: 1.2rem;">Post a job (it’s free)</p> </div>
+           <div> <p style="padding: 1em 0.1em 0 0.1em; font-size: 1rem; ">Tell us about your project. Upwork connects you with top talent and agencies around the world, or near you.</p> </div>
         </div>
         <div class="item">
-            <div class="photo">
-                <img class="grid-img" src="./../../../../../assets/images/home/moc.jpg" />
+            <div class="photo" style="height: 60%;">
+                <!-- <img class="grid-img" src="./../../../../../assets/images/home/iso.jpg" /> -->
             </div>
-            <p>Certified by Ministry of Ext. Affairs</p>
+            <mat-divider></mat-divider>
+           <div> <p style="padding: 1em 0.1em 0 0.1em ;  font-size: 1.2rem;">Post a job (it’s free)</p> </div>
+           <div> <p style="padding: 1em 0.1em 0 0.1em ; font-size: 1rem;">Tell us about your project. Upwork connects you with top talent and agencies around the world, or near you.</p> </div>
         </div>
         <div class="item">
-            <div class="photo">
-                <img class="grid-img" src="./../../../../../assets/images/home/moc.jpg" />
+            <div class="photo" style="height: 60%;">
+                <img class="grid-img" src="./../../../../../assets/images/home/iso.jpg" />
             </div>
-            <p>Certified by Ministry of Ext. Affairs</p>
-        </div>  
-        <div class="item">
-            <div class="photo">
-                <img class="grid-img" src="./../../../../../assets/images/home/moc.jpg" />
-            </div>
-            <p>Certified by Ministry of Ext. Affairs</p>
+            <mat-divider></mat-divider>
+           <div> <p style="padding: 1em 0.1em 0 0.1em; font-size: 1.2rem;">Post a job (it’s free)</p> </div>
+           <div> <p style="padding: 1em 0.1em 0 0.1em; font-size: 1rem;">Tell us about your project. Upwork connects you with top talent and agencies around the world, or near you.</p> </div>
         </div>
-        <div class="item">
-            <div class="photo">
-                <img class="grid-img" src="./../../../../../assets/images/home/moc.jpg" />
-            </div>
-            <p>Certified by Ministry of Ext. Affairs</p>
-        </div>
-        <div class="item">
-            <div class="photo">
-                <img class="grid-img" src="./../../../../../assets/images/home/moc.jpg" />
-            </div>
-            <p>Certified by Ministry of Ext. Affairs</p>
-        </div>
+  
     </div>
 
-    <h1 style="text-align:center;  font: 2em 'Fira Sans', sans-serif; font-weight: bolder; margin-top: 25px; margin-bottom: 25px;">Get started...</h1>
+    </div>
 
-    <div class="grid-container">
-        <div class="item">
-            <div class="photo">
-                <img class="grid-img" src="./../../../../../assets/images/home/moc.jpg" />
+
+    <div class="plans" style="background-color: whitesmoke; padding-bottom: 5em;">
+
+        <h1 style="text-align:center; color: #494747; font-size: 2.2rem; padding-top: 4rem; font-weight: bold;">Choose the offering that works best for you</h1>
+        <div> <p style="text-align:center; color: #494747; padding: 0.5rem 0.1rem 2.5rem 0.1rem; font-size: 1.2rem;">Post a job (it’s free)</p> </div>
+
+        <div class="grid-plans">
+            <div class="item-plans" *ngFor="let plan of plans">
+                <div class="photo" style="height: 30%;">
+                    <div class="plan-title" style="padding-top:1.5rem; font-weight: bold;"><h2>{{plan.title}}</h2></div>
+                    <div><button mat-raised-button color="primary" style="width: 60%; background-color: #fd3b55;">{{plan.action}}</button></div>
+                    <div class="plan-title" style="padding-top:1rem; font-weight: bold;"><h3>{{plan.fee}}</h3></div>
+                </div>
+                <mat-divider></mat-divider>
+                <mat-list >
+                    <mat-list-item style="padding-top: 1em" *ngFor="let feature of plan.features">
+                      <mat-icon style="color: #fd3b55; font-weight: bold;" mat-list-icon>check</mat-icon>
+                      <div style="text-align:left" mat-line>{{feature.name}}</div>
+                    </mat-list-item>
+                </mat-list>
             </div>
-            <p>Certified by Ministry of Ext. Affairs</p>
-        </div>
-        <div class="item">
-            <div class="photo">
-                <img class="grid-img" src="./../../../../../assets/images/home/moc.jpg" />
-            </div>
-            <p>Certified by Ministry of Ext. Affairs</p>
-        </div>
-        <div class="item">
-            <div class="photo">
-                <img class="grid-img" src="./../../../../../assets/images/home/moc.jpg" />
-            </div>
-            <p>Certified by Ministry of Ext. Affairs</p>
         </div>
     </div>
 	
 	
-	<footer class="center bg-dark">
+	<footer  class="center bg-dark">
 		<p>Captchabro &copy; 2020</p>
 	</footer>
 
