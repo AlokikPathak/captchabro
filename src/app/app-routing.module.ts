@@ -24,6 +24,15 @@ const routes: Routes = [
     
       }
     ]
+  }, {
+    path: 'gameplay',
+    component: AdminLayout,
+    children: [
+      {
+        path: '', 
+        loadChildren: () => import('./modules/gameplay/gameplay.module').then(m=> m.GameplayModule)
+      }
+    ]
   }
 ];
 

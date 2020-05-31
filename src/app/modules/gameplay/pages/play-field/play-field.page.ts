@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlayFieldPage implements OnInit {
 
+  value="";
   constructor() { }
 
   ngOnInit(): void {
