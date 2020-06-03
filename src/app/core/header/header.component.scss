@@ -25,3 +25,14 @@ mat-toolbar {
     color: #fd3b55;
     background-color: white;
 }
+
+button {
+    margin-left:  1rem;
+}
+
+@media(max-width: 600px) {
+
+    button {
+        margin-left: 0.5rem;
+    }
+}

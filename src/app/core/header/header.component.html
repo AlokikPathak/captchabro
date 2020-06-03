@@ -11,9 +11,12 @@
 
     <button mat-button class="primary" routerLink="/session" >Login</button>
     <!-- <button mat-button class="primary" routerLink="/session/signup" >Signup</button> -->
+    <button (click)="toggleNotificationSidenav.emit()" mat-icon-button class="ml-xs overflow-visible">
+      <mat-icon matBadge="15" matBadgeColor="primary">notifications</mat-icon>
+    </button>
 
-    <button class="menu-button" routerLink="" matTooltip="List"  mat-icon-button class="ml-xs" fxLayout fxHide.xs  >
-      <mat-icon>list</mat-icon>
+    <button class="menu-button" routerLink="" matTooltip="Settings"  mat-icon-button class="ml-xs" fxLayout fxHide.xs  >
+      <mat-icon>settings</mat-icon>
     </button>
   
   
@@ -29,8 +32,8 @@
     <mat-menu #smallScreenHeaderMenu="matMenu">
         
       <button mat-menu-item  routerLink=""> 
-          <mat-icon>list</mat-icon>
-          <span>List</span>
+          <mat-icon>settings</mat-icon>
+          <span>Settings</span>
       </button>
   
     </mat-menu>

@@ -1,3 +1,13 @@
-<app-header></app-header>
-<router-outlet></router-outlet>
 
+<app-header (toggleNotificationSidenav)="notifications.toggle()"></app-header>
+
+<mat-sidenav-container class="app-inner">
+
+    <mat-sidenav #notifications position="end" class="chat-panel" mode="over" opened="false">
+      <app-notification></app-notification>
+    </mat-sidenav>
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+    
+</mat-sidenav-container>
