@@ -53,8 +53,13 @@
 @media ( max-width : 600px) {
     .gameplay-station {
         margin: 2rem auto;
-        width:  92vw;
-        height: 80vh;
+        width:  96vw;
+        height: 95vh;
         background-color: white;
+    }
+    .item {
+        margin-right: 0.5rem;
+        margin-left: 0.5rem;
+
     }
 }

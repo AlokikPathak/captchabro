@@ -1,1 +1,62 @@
-<p>payments works!</p>
+<div class="payments">
+
+    <div class="payments-title-grid">
+ 
+        <div class="item">
+            <div><h3>TRANSACTION</h3></div>
+        </div>
+        <div class="item">
+            <div><h3>AMOUNT</h3></div>
+        </div>
+        <div class="item">
+            <div><h3>STATUS</h3></div>
+            <mat-form-field class="example-form-field"  appearance="outline">
+                <!-- <mat-label>Enter Captcha</mat-label> -->
+                <input matInput placeholder="Enter Captcha..." type="text" [(ngModel)]="amount" style="color: #fd3b55;">
+            </mat-form-field>
+        </div>
+        <div class="item">
+            <div><h3>COMMENTS</h3></div>
+        </div>
+    </div>
+
+    <div class="payments-grid">
+        <div class="item" style="text-align:center">
+        </div>
+        <div class="item">
+            <div><h3>TRANSACTION</h3></div>
+        </div>
+        <div class="item">
+            <div><h3>AMOUNT</h3></div>
+        </div>
+        <div class="item">
+            <div><h3>STATUS</h3></div>
+        </div>
+        <div class="item">
+            <div><h3>COMMENTS</h3></div>
+        </div>
+    </div>
+
+    <div class="payments-grid" *ngFor="let Payment of paymentList">
+
+        <div class="item" style="text-align:center">
+            <div style="display: inline-block;"><img   class="score-icon" src="./../../../../../assets/images/correct.png" /></div>
+        </div>
+        
+        <div class="item">
+            <div><h3>{{Payment.to}}</h3></div>
+            <p class="py-0">{{Payment.timestamp}}</p>
+            <p class="py-0">{{Payment.from}}</p>
+            <p class="py-0">Transaction ID: {{Payment.transactionId}}</p>
+        </div>
+        <div class="item">
+            <div><h3>{{Payment.amount}}</h3></div>
+        </div>
+        <div class="item">
+            <div><h3>{{Payment.result}}</h3></div>
+        </div>
+        <div class="item">
+            <div><p>{{Payment.comments}}</p></div>
+        </div>
+    </div>
+</div>
