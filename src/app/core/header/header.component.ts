@@ -1,4 +1,5 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Router} from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -10,7 +11,7 @@ export class HeaderComponent implements OnInit {
   @Output() toggleNotificationSidenav = new EventEmitter<void>();
 
 
-  constructor() { }
+  constructor( private _router: Router) { }
 
   ngOnInit(): void {
   }
@@ -21,5 +22,6 @@ export class HeaderComponent implements OnInit {
    */
   viewHome(): void {
     console.log("Navigate to home page");
+    this._router.navigate([""]);
   }
 }

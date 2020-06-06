@@ -20,12 +20,27 @@
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto;
-    margin: 0 auto;
+    margin: 1rem auto;
+    width: 80vw;
+    grid-gap: 0.1rem;
+    background-color: whitesmoke;
+    box-shadow: 0.1rem 0.05rem 0.5rem 0.08rem grey;
+
 }
 
 .item {
     padding-top: 1rem;
     // overflow-x: hidden;
+}
+
+.item-title {
+    background-color: white;
+    // height: 100px;
+    width: 40vw;
+}
+.subitem-title {
+    width: 80%;
+    margin: 2rem auto;
 }
 
 .score-icon {

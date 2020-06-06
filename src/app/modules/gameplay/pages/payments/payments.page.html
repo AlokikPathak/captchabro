@@ -1,22 +1,35 @@
 <div class="payments">
 
     <div class="payments-title-grid">
+        <div class="item-title">
+            <div class="subitem-title">
+                <div><h2>WALLET BALANCE</h2></div>
+                <!-- <div style="color: #fd3b55"><h2>₹ 5251</h2></div> -->
+            </div> 
+        </div>
+        <div class="item-title">
+            <div class="subitem-title">
+                <!-- <div><h2>WALLET BALANCE</h2></div> -->
+                <div style="color: #fd3b55"><h2>₹ 5251</h2></div>
+            </div> 
+        </div>
  
-        <div class="item">
-            <div><h3>TRANSACTION</h3></div>
+        <div class="item-title">
+            <div class="subitem-title">
+                <div><h2>REDEEM MONEY FROM WALLET</h2></div>
+                <mat-form-field class="example-form-field"  appearance="outline" style="width:80%">
+                    <input matInput placeholder="Enter Amount..." type="text" [(ngModel)]="amount" style="color: #fd3b55;">
+                </mat-form-field>
+                <!-- <mat-icon matSuffix>visibility</mat-icon> -->
+                <!-- <div><p>Conversion charges are 2% & GST***</p></div> -->
+                <!-- <div><button mat-flat-button color="primary" style="background-color: #fd3b55;">Redeem Money</button></div> -->
+            </div>
         </div>
-        <div class="item">
-            <div><h3>AMOUNT</h3></div>
-        </div>
-        <div class="item">
-            <div><h3>STATUS</h3></div>
-            <mat-form-field class="example-form-field"  appearance="outline">
-                <!-- <mat-label>Enter Captcha</mat-label> -->
-                <input matInput placeholder="Enter Captcha..." type="text" [(ngModel)]="amount" style="color: #fd3b55;">
-            </mat-form-field>
-        </div>
-        <div class="item">
-            <div><h3>COMMENTS</h3></div>
+        <div class="item-title">
+            <div class="subitem-title">
+                <div><h2 style="color: dodgerblue;">Conversion charges are 2% & GST***</h2></div>
+                <div><button mat-flat-button class="pb-2" color="primary" style="background-color: #fd3b55; width: 50%;">Redeem Money</button></div>
+            </div>
         </div>
     </div>
 

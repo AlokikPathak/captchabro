@@ -4,8 +4,8 @@
         <mat-card>
           <mat-card-content>
             <form [formGroup]="form" (ngSubmit)="onSubmit()">
-              <div class="text-xs-center pb-1">
-                <img src="assets/images/logo_dark_2x.png" alt=""/>
+              <div class="text-xs-center pb-1" style="text-align: center">
+                <img src="assets/images/logo_dark.png" alt="" style="height: 96px; width: 96px; display: inline-block;"/>
               </div>
               <div fxLayout="column"  fxLayoutAlign="space-around">
                 <div class="pb-1">
@@ -41,7 +41,7 @@
               </div>
               <div class="pt-1 pb-1 text-xs-center">
                 <a [routerLink]="['/session/forget']">Forgot password?</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a [routerLink]="['/session/signin']">Access your account.</a>
+                <a [routerLink]="['/session/']">Access your account.</a>
               </div>
             </form>
           </mat-card-content>

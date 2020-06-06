@@ -1,42 +1,49 @@
 <mat-toolbar class="main-header">
 
-    <div class="branding-logo">
-      <img src="assets/images/logo_white_x.png" (click)="viewHome()" alt=""/>
+    <div class="branding-logo" style="text-align: center;">
+      <img style="padding-top: 0.5rem;"  src="assets/images/logo_white_48.png" (click)="viewHome()" alt=""/>
     </div>
-    <div class="branding-text">
+    <!-- <div class="branding-text">
       <h1 (click)="viewHome()">Captchabro</h1>
-    </div>
+    </div> -->
   
     <span style="flex: 1 1 auto;"></span>
-
+    <!-- <button mat-button class="primary"  >About</button> -->
     <button mat-button class="primary" routerLink="/session" >Login</button>
+
     <!-- <button mat-button class="primary" routerLink="/session/signup" >Signup</button> -->
     <button (click)="toggleNotificationSidenav.emit()" mat-icon-button class="ml-xs overflow-visible">
       <mat-icon matBadge="15" matBadgeColor="accent" style="color: white">notifications</mat-icon>
     </button>
-
-    <button class="menu-button" routerLink="" matTooltip="Settings"  mat-icon-button class="ml-xs" fxLayout fxHide.xs  >
-      <mat-icon>settings</mat-icon>
+    <button mat-icon-button routerLink="/gameplay/payments" aria-label="icon">
+      <span class="material-icons">
+        account_balance_wallet
+        </span>
     </button>
+
+    <!-- <button class="menu-button" routerLink="" matTooltip="Settings"  mat-icon-button class="ml-xs" fxLayout fxHide.xs  >
+      <mat-icon>settings</mat-icon>
+    </button> -->
   
   
     <!--
       /*
        * Header menu when the page is not viewed or Desktop or iPads
        */
-    -->
+    
     <button class="menu-button" mat-icon-button [matMenuTriggerFor] = "smallScreenHeaderMenu" fxShow.gt-lg="false" fxShow.lg="false" fxShow.md="false" fxShow.sm="false" fxShow="true"  >
       <mat-icon>more_vert</mat-icon>
     </button>
   
     <mat-menu #smallScreenHeaderMenu="matMenu">
         
-      <button mat-menu-item  routerLink=""> 
+     <button mat-menu-item  routerLink=""> 
           <mat-icon>settings</mat-icon>
           <span>Settings</span>
-      </button>
+      </button> 
   
     </mat-menu>
+    -->
   
   </mat-toolbar>
   
