@@ -14,7 +14,7 @@ body {
     grid-template-rows: auto;
     grid-gap: 0px;
     background-color: #fd3b55;
-    overflow-x: hidden;
+    overflow: hidden;
   }
   .grid-header-item {
     height: 80vh;
@@ -32,7 +32,7 @@ body {
   }
 
   .grid-header-title {
-    padding: 1rem 0.1rem 0 0.1rem; font-size: 6rem; color: white;
+    padding: 1rem 0.1rem 0 0.1rem; font-size: 4.5rem; color: white;
     line-height: 100%;
   }
   

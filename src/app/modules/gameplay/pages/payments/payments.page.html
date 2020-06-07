@@ -1,4 +1,4 @@
-<div class="payments">
+<div class="payments"  fxHide.xs>
 
     <div class="payments-title-grid">
         <div class="item-title">
@@ -72,4 +72,41 @@
             <div><p>{{Payment.comments}}</p></div>
         </div>
     </div>
+</div>
+
+
+<div class="payments-xs"   fxShow.gt-lg="false" fxShow.lg="false" fxShow.md="false" fxShow.sm="true" fxShow="true">
+    <div style="margin-top: 1rem;">
+        <div><h2>WALLET BALANCE</h2></div>
+        <div><h1 style="color: #fd3b55; font-weight: bolder; font-size: 3rem;">₹ 5251</h1></div>
+        <div><h2>REDEEM MONEY FROM WALLET</h2></div>
+    </div>
+
+    <div>
+        <mat-form-field class="example-form-field"  appearance="outline" style="width:60%">
+            <input matInput placeholder="Enter Amount..." type="text" [(ngModel)]="amount" style="color: #fd3b55;">
+        </mat-form-field>
+    </div>
+    <div><button mat-flat-button class="pb-2" color="primary" style="background-color: #fd3b55; width: 60%;">Redeem Money</button></div>
+    <div><p style="color: dodgerblue;">Conversion charges are 2% & GST***</p></div>
+
+    <div class="pay-xs" *ngFor="let Payment of paymentList">
+
+        <!-- <div class="item-x" style="text-align:center">
+            <div style="display: inline-block;"><img   class="score-icon" src="./../../../../../assets/images/correct.png" /></div>
+        </div> -->
+        
+        <div class="item-x">
+            <h2>{{Payment.to}}</h2>
+            <p class="py-0" style="color: grey">{{Payment.timestamp}}</p>
+            <p class="py-0">FROM: {{Payment.from}}</p>
+            <p class="py-0">Transaction ID: {{Payment.transactionId}}</p>
+            <h2 style="color: #fd3b55;">₹ {{Payment.amount}}</h2>
+            <h3 style="color: green;">{{Payment.result}}</h3>
+            <p style="color: dodgerblue">{{Payment.comments}}</p>
+        </div>
+    </div>
+
+
+
 </div>
